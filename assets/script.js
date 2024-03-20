@@ -2,19 +2,41 @@
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
-const collectEmployees = function() {
+const collectEmployees = function () {
   // TODO: Get user input to create and return an array of employee objects
+  let employees = [];
+  const addEmployee = true;
+  while (addEmployee) {
+    const employee = {
+      firstName: prompt('What is the employees first name'),
+      lastName: prompt("What is the employee's last name"),
+      salary: prompt(`What is the salary`)
+    };
+    console.log('employee', employee);
+    employees.push(employee);
+    console.log('employees array', employees);
+    addEmployee = confirm('would you like to add aother employee');
+  }
+  return employees;
 }
 
 // Display the average salary
-const displayAverageSalary = function(employeesArray) {
+const displayAverageSalary = function (employeesArray) {
   // TODO: Calculate and display the average salary
+
 }
 
+
 // Select a random employee
-const getRandomEmployee = function(employeesArray) {
+const getRandomEmployee = function (employeesArray) {
   // TODO: Select and display a random employee
 }
+
+
+/* Need to create an collectEmployees function that will allow adding multiple employees on the page. 
+The user can enter first name, last name and the salary
+Then have the option to stop. A while loop needs to be used here
+The salary needs to be added as a number or it should default to $0. Use the isNAN function /*
 
 /*
   ====================
@@ -23,7 +45,7 @@ const getRandomEmployee = function(employeesArray) {
 */
 
 // Display employee data in an HTML table
-const displayEmployees = function(employeesArray) {
+const displayEmployees = function (employeesArray) {
   // Get the employee table
   const employeeTable = document.querySelector('#employee-table');
 
@@ -46,9 +68,9 @@ const displayEmployees = function(employeesArray) {
 
     const salaryCell = document.createElement("td");
     // Format the salary as currency
-    salaryCell.textContent = currentEmployee.salary.toLocaleString("en-US",{
-      style:"currency",
-      currency:"USD"
+    salaryCell.textContent = currentEmployee.salary.toLocaleString("en-US", {
+      style: "currency",
+      currency: "USD"
     });
 
     newTableRow.append(salaryCell);
@@ -57,7 +79,7 @@ const displayEmployees = function(employeesArray) {
   }
 }
 
-const trackEmployeeData = function() {
+const trackEmployeeData = function () {
   const employees = collectEmployees();
 
   console.table(employees);
@@ -68,7 +90,7 @@ const trackEmployeeData = function() {
 
   getRandomEmployee(employees);
 
-  employees.sort(function(a,b) {
+  employees.sort(function (a, b) {
     if (a.lastName < b.lastName) {
       return -1;
     } else {
