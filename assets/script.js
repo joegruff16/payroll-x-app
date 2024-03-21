@@ -20,7 +20,7 @@ const collectEmployees = function () {
     const employee = {
       firstName: prompt('What is the employees first name'),
       lastName: prompt("What is the employee's last name"),
-      salary: prompt(`What is the salary`)
+      salary: parseInt(prompt(`What is the salary`))
     };
     console.log('employee', employee);
     employees.push(employee);
@@ -32,16 +32,34 @@ const collectEmployees = function () {
 
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
+  console.log(employeesArray)
   // TODO: Calculate and display the average salary
+  let totalSalary = 0;
+  let numEmployees = employeesArray.length;
   // Collect all employee's salary data
   // Take the sum of that data
   // Divide by number of employees to return the average salary data
-  let sum = 0;
-  for (let i = 0; i < employeesArray.length; i++) {
-    sum += employeesArray[i];
-  }
-  return sum / employeesArray.length;
+  // employeesArray = [];
+  // let sum = 0;
+  //   for (let i = 0; i < employeesArray.length; i++) {
+  //     sum += employeesArray[i];
+  //   }
+  //   return sum / employeesArray.length;
+
 }
+for (const employee of numEmployees) {
+  totalSalary += employee.salary;
+  // totalSalary += employeesArray[i];
+  // for (let i = 0; i < numEmployees; i++) {
+  //   totalSalary += numEmployees[i];
+  // }
+  // return totalSalary;
+
+
+}
+const averageSalary = totalSalary / numEmployees;
+console.log(`The average employee salary between our ${numEmployees} employees is ${totalSalary}`);
+console.log(averageSalary)
 
 
 // Select a random employee
