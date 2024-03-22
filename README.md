@@ -22,8 +22,8 @@ MIT see more details in repo
 
 ## Live Link
 
-<>
+<https://joegruff16.github.io/payroll-x-app/>
 
 ## GitHub Repo
 
-<>
+<https://github.com/joegruff16/payroll-x-app>
