@@ -5,10 +5,11 @@
 
 This is a payroll application that allows you to enter in the first and last name of an employee and their salary. Then the app calculates the average salary. Then the app selects a winning employee at random. 
 
-
 ## Finished Product 
 
+This is my completed payroll-x-app. You can also see in this image what's happening in the console after you enter in the employee name and their salaries:
 
+!["payroll-x-app"](./assets/payroll-x-screen-shot.png "Company Payroll App")
 
 ## Credits
 
