@@ -45,14 +45,15 @@ const displayAverageSalary = function (employeesArray) {
   //     sum += employeesArray[i];
   //   }
   //   return sum / employeesArray.length;
+
   for (const employee of employeesArray) {
     totalSalary = totalSalary + employee.salary;
     console.log("employee", employee.salary)
   }
 
   const averageSalary = totalSalary / numEmployees;
-  console.log(`The average employee salary between our ${numEmployees} employees is ${totalSalary}`);
-  console.log(averageSalary)
+  console.log(`The average employee salary between our ${numEmployees} employees is ${averageSalary}`);
+
 
   // totalSalary += employeesArray[i];
   // for (let i = 0; i < numEmployees; i++) {
@@ -67,8 +68,11 @@ const displayAverageSalary = function (employeesArray) {
 
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
+  let randomEmployee = employeesArray[Math.floor(Math.random() * employeesArray.length)]
   // TODO: Select and display a random employee
+  console.log("randomEmployee", randomEmployee)
 }
+
 
 
 /* Need to create an collectEmployees function that will allow adding multiple employees on the page. 
