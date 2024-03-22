@@ -45,10 +45,15 @@ const displayAverageSalary = function (employeesArray) {
   //     sum += employeesArray[i];
   //   }
   //   return sum / employeesArray.length;
+  for (const employee of employeesArray) {
+    totalSalary = totalSalary + employee.salary;
+    console.log("employee", employee.salary)
+  }
 
-}
-for (const employee of numEmployees) {
-  totalSalary += employee.salary;
+  const averageSalary = totalSalary / numEmployees;
+  console.log(`The average employee salary between our ${numEmployees} employees is ${totalSalary}`);
+  console.log(averageSalary)
+
   // totalSalary += employeesArray[i];
   // for (let i = 0; i < numEmployees; i++) {
   //   totalSalary += numEmployees[i];
@@ -57,9 +62,7 @@ for (const employee of numEmployees) {
 
 
 }
-const averageSalary = totalSalary / numEmployees;
-console.log(`The average employee salary between our ${numEmployees} employees is ${totalSalary}`);
-console.log(averageSalary)
+
 
 
 // Select a random employee
