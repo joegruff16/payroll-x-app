@@ -1,12 +1,3 @@
-// GIVEN an employee payroll tracker
-// WHEN I click the "Add employee" button
-// THEN I am presented with a series of prompts asking for first name, last name, and salary
-// WHEN I finish adding an employee
-// THEN I am prompted to continue or cancel
-// WHEN I choose to continue
-// THEN I am prompted to add a new employee
-// WHEN I choose to cancel
-// THEN my employee data is displayed on the page sorted alphabetically by last name, and the console shows computed and aggregated data
 
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
@@ -36,15 +27,10 @@ const displayAverageSalary = function (employeesArray) {
   // TODO: Calculate and display the average salary
   let totalSalary = 0;
   let numEmployees = employeesArray.length;
+
   // Collect all employee's salary data
   // Take the sum of that data
   // Divide by number of employees to return the average salary data
-  // employeesArray = [];
-  // let sum = 0;
-  //   for (let i = 0; i < employeesArray.length; i++) {
-  //     sum += employeesArray[i];
-  //   }
-  //   return sum / employeesArray.length;
 
   for (const employee of employeesArray) {
     totalSalary = totalSalary + employee.salary;
@@ -54,16 +40,21 @@ const displayAverageSalary = function (employeesArray) {
   const averageSalary = totalSalary / numEmployees;
   console.log(`The average employee salary between our ${numEmployees} employees is ${averageSalary}`);
 
+  // Saving this unused code for the future in case I need it
+  // employeesArray = [];
+  // let sum = 0;
+  //   for (let i = 0; i < employeesArray.length; i++) {
+  //     sum += employeesArray[i];
+  //   }
+  //   return sum / employeesArray.length;
+
   // totalSalary += employeesArray[i];
   // for (let i = 0; i < numEmployees; i++) {
   //   totalSalary += numEmployees[i];
   // }
   // return totalSalary;
 
-
 }
-
-
 
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
@@ -73,8 +64,6 @@ const getRandomEmployee = function (employeesArray) {
   console.log(`Congrats to ${randomEmployee.firstName} ${randomEmployee.lastName} our random winner`);
   console.log("randomEmployee", randomEmployee)
 }
-
-
 
 /* Need to create an collectEmployees function that will allow adding multiple employees on the page. 
 The user can enter first name, last name and the salary
